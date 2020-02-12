@@ -41,7 +41,7 @@
 
         public async Task<Users> AuthenticateUser(Users login)
         {
-            var user = await this.usersService.GetUser(login);
+            var user = await this.usersService.GetUserByUsername(login);
 
             if (user != null && user.Password == login.Password)
             {

@@ -23,6 +23,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{A3B742A4-0
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "Tagani", "Tagani\Tagani.sqlproj", "{C3A799B4-4BB3-4C18-92B3-7C80A7644C5A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaganiPlusUnitTests", "TaganiPlusUnitTests\TaganiPlusUnitTests.csproj", "{F07BD3DB-18E8-415D-8DAF-5FE2666A3AE4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{C3A799B4-4BB3-4C18-92B3-7C80A7644C5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C3A799B4-4BB3-4C18-92B3-7C80A7644C5A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C3A799B4-4BB3-4C18-92B3-7C80A7644C5A}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{F07BD3DB-18E8-415D-8DAF-5FE2666A3AE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F07BD3DB-18E8-415D-8DAF-5FE2666A3AE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F07BD3DB-18E8-415D-8DAF-5FE2666A3AE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F07BD3DB-18E8-415D-8DAF-5FE2666A3AE4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -61,6 +67,7 @@ Global
 		{BA95EA2F-3285-4D4E-8D51-34ED69D2CB66} = {7CB2B3EA-8A0F-4505-8B1F-D04AAB2C2A18}
 		{D356C958-BEF0-429B-BB27-D42622E5EEC8} = {AF1AC9DB-0484-43F8-ABED-5F26055E4366}
 		{C3A799B4-4BB3-4C18-92B3-7C80A7644C5A} = {A3B742A4-035F-4F4E-9A25-2172FF5CBF9B}
+		{F07BD3DB-18E8-415D-8DAF-5FE2666A3AE4} = {7219051A-67FF-43A4-A8AC-5FF5A89007C8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {03515389-1592-4A4A-A4F5-B8D3BCCD1FFA}

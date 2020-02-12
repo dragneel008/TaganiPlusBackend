@@ -1,20 +1,16 @@
 ﻿namespace Entities.WebRequests
 {
-    using System;
+    using System.ComponentModel.DataAnnotations;
     using Newtonsoft.Json;
 
     public class LoginWebRequest
     {
-        [JsonProperty("id")]
-        public Guid Id { get; set; }
-
         [JsonProperty("username")]
+        [Required(ErrorMessage = "Please enter your username.")]
         public string Username { get; set; }
 
         [JsonProperty("password")]
+        [Required(ErrorMessage = "Please enter your password.")]
         public string Password { get; set; }
-
-        [JsonProperty("email")]
-        public string Email { get; set; }
     }
 }

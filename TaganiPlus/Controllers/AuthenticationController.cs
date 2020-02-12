@@ -5,6 +5,7 @@
     using Entities.Entities;
     using Entities.WebRequests;
     using Entities.WebResponses;
+    using Microsoft.AspNetCore.Http;
     using Microsoft.AspNetCore.Mvc;
     using Services.Interfaces;
 
@@ -13,7 +14,7 @@
     public class AuthenticationController : ControllerBase
     {
         private readonly IJwtService jwtService;
-        private IMapper mapper;
+        private readonly IMapper mapper;
 
         public AuthenticationController(IJwtService jwtService, IMapper mapper)
         {
@@ -21,6 +22,18 @@
             this.mapper = mapper;
         }
 
+        /// <summary>
+        /// Login to the app.
+        /// </summary>
+        /// <param name="userInfo"></param>
+        /// <returns></returns>
+        /// <remarks>
+        /// This endpoint will generate a token for you to be authenticated.
+        /// </remarks>
+        /// <response code="201">Returns the email and token string.</response>
+        /// <response code="401">If you don't have the correct credentials.</response>
+        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
+        [ProducesResponseType(StatusCodes.Status201Created)]
         [HttpPost]
         [Route("login")]
         public async Task<IActionResult> Login([FromBody]LoginWebRequest userInfo)
@@ -37,7 +50,7 @@
                     Token = tokenString
                 };
 
-                response = Ok(userWithToken);
+                response = Created("api/account/login", userWithToken);
             }
 
             return response;
