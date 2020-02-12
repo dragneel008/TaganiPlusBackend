@@ -15,4 +15,4 @@ $ git clone https://github.com/TaganiPhilippines/TaganiPlusBackend
 ```
 
 ## Running the Project
---* Press F5 and use Postman for testing the endpoints.
+- Press F5 and use Postman for testing the endpoints.
