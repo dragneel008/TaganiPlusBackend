@@ -1,8 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace Entities.Entities
+﻿namespace Entities.Entities
 {
+    using System;
+    using System.ComponentModel.DataAnnotations.Schema;
+
+    [Table("Users")]
     public partial class Users
     {
         public Guid Id { get; set; }

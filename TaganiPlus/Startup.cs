@@ -34,6 +34,13 @@ namespace TaganiPlus
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddCors(options => 
+            {
+                options.AddPolicy("taganiPlusFrontend", builder =>
+                {
+                    builder.WithOrigins("http://localhost:82").AllowAnyHeader().AllowAnyMethod();
+                });
+            });
             services.AddDbContextPool<TaganiContext>(options => options.UseSqlServer(this.Configuration["ConnectionStrings:Tagani"]));
             services.AddSwaggerGen(c =>
             {
@@ -74,6 +81,8 @@ namespace TaganiPlus
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             app.UseAuthentication();
+
+            app.UseCors("taganiPlusFrontend");
 
             if (env.IsDevelopment())
             {

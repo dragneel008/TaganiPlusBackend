@@ -5,6 +5,7 @@
     using Entities.Entities;
     using Entities.WebRequests;
     using Entities.WebResponses;
+    using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Http;
     using Microsoft.AspNetCore.Mvc;
     using Services.Interfaces;
@@ -46,7 +47,7 @@
                 var tokenString = this.jwtService.GenerateJSONWebToken(user);
                 var userWithToken = new LoginWebResponse
                 {
-                    Email = user.Email,
+                    Id = user.Id,
                     Token = tokenString
                 };
 
