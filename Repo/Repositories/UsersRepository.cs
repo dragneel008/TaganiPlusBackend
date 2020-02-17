@@ -2,13 +2,12 @@
 {
     using System;
     using System.Collections.Generic;
-    using System.Linq;
     using System.Threading.Tasks;
     using Entities.Entities;
     using Microsoft.EntityFrameworkCore;
     using Repo.Interfaces;
 
-    public class UsersRepository : IUsersRepository
+    public class UsersRepository : IRepository<Users>
     {
         private readonly TaganiPlusContext context;
 
@@ -19,12 +18,12 @@
 
         public Task Delete(Users entity)
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
 
-        public async Task<Users> Get(Guid id)
+        public async Task<Users> Get(Users entity)
         {
-            return await this.context.Users.FindAsync(id);
+            return await this.context.Users.FindAsync(entity);
         }
 
         public async Task<ICollection<Users>> GetAll()
@@ -32,32 +31,29 @@
             return await this.context.Users.ToListAsync();
         }
 
-        public async Task<Users> GetByEmail(string email)
+        public Task<Users> GetById(object id)
         {
-            var usersList = await this.GetAll();
-            var user = usersList.ToList().FirstOrDefault(user => user.Email == email);
-
-            return user;
+            throw new NotImplementedException();
         }
 
         public Task Insert(Users entity)
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
 
         public Task Remove(Users entity)
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
 
         public Task SaveChanges()
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
 
         public Task Update(Users entity)
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
     }
 }

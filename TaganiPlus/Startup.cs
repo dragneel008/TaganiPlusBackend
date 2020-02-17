@@ -113,11 +113,16 @@ namespace TaganiPlus
         {
             services.AddTransient<IJwtService, JwtService>();
             services.AddTransient<IUsersService, UsersService>();
+            services.AddTransient<IPhilippineRegionService, PhilippineRegionService>();
         }
 
         private static void RegisterRepositories(ref IServiceCollection services)
         {
-            services.AddTransient<IUsersRepository, UsersRepository>();
+            services.AddTransient<IRepository<Users>, UsersRepository>();
+            services.AddTransient<IRepository<Regions>, RegionsRepository>();
+            services.AddTransient<IRepository<Provinces>, ProvincesRepository>();
+            services.AddTransient<IRepository<Municipalities>, MunicipalitiesRepository>();
+            services.AddTransient<IRepository<Barangays>, BarangaysRepository>();
         }
     }
 }

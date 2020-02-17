@@ -51,7 +51,7 @@
             };
             var request = new LoginWebRequest
             {
-                Username = "valid",
+                Email = "valid",
                 Password = "password"
             };
 

@@ -5,8 +5,6 @@
 
     public interface IUsersService
     {
-        Task<Users> GetUser(Users user);
-
         Task<Users> GetUserByEmail(Users user);
     }
 }
