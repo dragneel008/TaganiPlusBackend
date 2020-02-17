@@ -19,9 +19,9 @@ namespace Services.Services
             return await this.usersRepository.Get(user.Id);
         }
 
-        public async Task<Users> GetUserByUsername(Users user)
+        public async Task<Users> GetUserByEmail(Users user)
         {
-            return await this.usersRepository.GetByUsername(user.Username);
+            return await this.usersRepository.GetByEmail(user.Email);
         }
     }
 }

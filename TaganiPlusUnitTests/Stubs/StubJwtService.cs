@@ -17,15 +17,14 @@
                 new Users
                 {
                     Id = Guid.NewGuid(),
-                    Username = "valid",
                     Password = "password",
-                    Email = "test@gmail.com"
+                    Email = "valid"
                 });
         }
 
         public Task<Users> AuthenticateUser(Users login)
         {
-            if (login.Username == "valid")
+            if (login.Email == "valid")
             {
                 return Task.FromResult(this.stringUsers["valid"]);
             }

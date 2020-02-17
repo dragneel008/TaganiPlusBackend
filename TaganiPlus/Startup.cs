@@ -41,7 +41,7 @@ namespace TaganiPlus
                     builder.WithOrigins("http://localhost:82").AllowAnyHeader().AllowAnyMethod();
                 });
             });
-            services.AddDbContextPool<TaganiContext>(options => options.UseSqlServer(this.Configuration["ConnectionStrings:Tagani"]));
+            services.AddDbContextPool<TaganiPlusContext>(options => options.UseSqlServer(this.Configuration["ConnectionStrings:Tagani"]));
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo 

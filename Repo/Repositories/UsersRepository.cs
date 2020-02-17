@@ -10,9 +10,9 @@
 
     public class UsersRepository : IUsersRepository
     {
-        private readonly TaganiContext context;
+        private readonly TaganiPlusContext context;
 
-        public UsersRepository(TaganiContext context)
+        public UsersRepository(TaganiPlusContext context)
         {
             this.context = context;
         }
@@ -32,10 +32,10 @@
             return await this.context.Users.ToListAsync();
         }
 
-        public async Task<Users> GetByUsername(string username)
+        public async Task<Users> GetByEmail(string email)
         {
             var usersList = await this.GetAll();
-            var user = usersList.ToList().FirstOrDefault(user => user.Username == username);
+            var user = usersList.ToList().FirstOrDefault(user => user.Email == email);
 
             return user;
         }

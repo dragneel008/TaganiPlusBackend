@@ -10,7 +10,7 @@
         Task<ICollection<Users>> GetAll();
         Task<Users> Get(Guid id);
 
-        Task<Users> GetByUsername(string username);
+        Task<Users> GetByEmail(string email);
 
         Task Insert(Users entity);
         Task Update(Users entity);

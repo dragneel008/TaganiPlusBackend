@@ -57,11 +57,21 @@
   <ItemGroup>
     <Folder Include="Properties" />
     <Folder Include="Scripts" />
+    <Folder Include="Tables" />
   </ItemGroup>
   <ItemGroup>
-    <Build Include="Users.sql" />
+    <Build Include="Tables\Users.sql" />
+    <Build Include="Tables\UserDetails.sql" />
+    <Build Include="Tables\Regions.sql" />
+    <Build Include="Tables\Provinces.sql" />
+    <Build Include="Tables\Municipalities.sql" />
+    <Build Include="Tables\Barangays.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Scripts\UsersSeed.sql" />
+    <None Include="Scripts\PhilippineRegions.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <RefactorLog Include="Tagani.refactorlog" />
   </ItemGroup>
 </Project>

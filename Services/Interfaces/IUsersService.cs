@@ -7,6 +7,6 @@
     {
         Task<Users> GetUser(Users user);
 
-        Task<Users> GetUserByUsername(Users user);
+        Task<Users> GetUserByEmail(Users user);
     }
 }

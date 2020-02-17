@@ -46,7 +46,7 @@
             // Arrange
             var expected = new LoginWebResponse
             {
-                Email = string.Empty,
+                Id = Guid.Empty,
                 Token = string.Empty
             };
             var request = new LoginWebRequest

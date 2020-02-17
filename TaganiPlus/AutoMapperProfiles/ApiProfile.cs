@@ -9,8 +9,7 @@ namespace TaganiPlus.AutoMapperProfiles
         public ApiProfile()
         {
             this.CreateMap<LoginWebRequest, Users>()
-                .ForMember(x => x.Id, opt => opt.Ignore())
-                .ForMember(x => x.Email, opt => opt.Ignore());
+                .ForMember(x => x.Id, opt => opt.Ignore());
         }
     }
 }

@@ -1,0 +1,6 @@
+﻿CREATE TABLE [dbo].[Regions]
+(
+	[Id] INT NOT NULL PRIMARY KEY IDENTITY, 
+    [Name] VARCHAR(MAX) NOT NULL, 
+    [ProvinceJSON] VARCHAR(MAX) NOT NULL
+)

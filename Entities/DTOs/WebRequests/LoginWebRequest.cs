@@ -5,9 +5,9 @@
 
     public class LoginWebRequest
     {
-        [JsonProperty("username")]
-        [Required(ErrorMessage = "Please enter your username.")]
-        public string Username { get; set; }
+        [JsonProperty("email")]
+        [Required(ErrorMessage = "Please enter your email.")]
+        public string Email { get; set; }
 
         [JsonProperty("password")]
         [Required(ErrorMessage = "Please enter your password.")]
